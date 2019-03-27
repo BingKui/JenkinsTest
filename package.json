@@ -1,0 +1,79 @@
+{
+  "name": "jenkinstest",
+  "version": "1.0.0",
+  "description": "jenkins 测试项目",
+  "main": "server.js",
+  "scripts": {
+    "dev": "cross-env ENV=dev webpack-dev-server --hot",
+    "build-dev": "cross-env ENV=dev webpack --config webpack.config.js",
+    "prod": "cross-env ENV=prod webpack-dev-server --hot",
+    "build-prod": "cross-env ENV=prod webpack --config webpack.config.js",
+    "start": "pm2 start server.js --name web-server",
+    "stop": "pm2 stop web-server",
+    "del": "pm2 delete web-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BingKui/JenkinsTest.git"
+  },
+  "keywords": [
+    "webpack4",
+    "vue2",
+    "vue-router",
+    "vuex"
+  ],
+  "author": "康兵奎",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BingKui/JenkinsTest/issues"
+  },
+  "homepage": "https://github.com/BingKui/JenkinsTest#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^0.19.1",
+    "v-contextmenu": "^2.8.0",
+    "vue": "^2.5.22",
+    "vue-router": "^3.0.2",
+    "vue-scrolly": "^0.9.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.2",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.5",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^1.0.0",
+    "concurrently": "^4.1.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.9.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-resources-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "vue-loader": "^15.4.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.4"
+  }
+}
