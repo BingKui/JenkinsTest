@@ -2,7 +2,6 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const proxy = require('http-proxy-middleware');
-const { port } = require('./build/config').prod;
 
 // 加载静态文件 打包好的静态文件放在dist下
 app.use(express.static(path.join(__dirname, './dist')));
@@ -17,6 +16,8 @@ app.use('/api/v1/poem', proxy({
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
+
+const port = 8888;
 
 //监听端口
 app.listen(port, (err) => {

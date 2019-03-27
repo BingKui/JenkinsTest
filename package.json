@@ -7,10 +7,7 @@
     "dev": "cross-env ENV=dev webpack-dev-server --hot",
     "build-dev": "cross-env ENV=dev webpack --config webpack.config.js",
     "prod": "cross-env ENV=prod webpack-dev-server --hot",
-    "build-prod": "cross-env ENV=prod webpack --config webpack.config.js",
-    "start": "pm2 start server.js --name web-server",
-    "stop": "pm2 stop web-server",
-    "del": "pm2 delete web-server"
+    "build-prod": "cross-env ENV=prod webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
